@@ -1,0 +1,14 @@
+.container__small-card{
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.small-card__photo img{
+  width: 200px;
+  margin-right: 20px;
+}

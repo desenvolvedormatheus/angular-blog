@@ -1,0 +1,12 @@
+.container__menu-bar{
+  padding: 15px;
+}
+
+.container__menu-bar ul{
+  display: flex;
+  gap: 20px;
+}
+
+.container__menu-bar ul li a{
+  padding: 8px;
+}
