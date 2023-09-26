@@ -1,0 +1,38 @@
+.container__content{
+  border-top: 1px solid white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container__cover{
+  border: 1px solid gray;
+}
+.content__cover img{
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.content__title{
+  border-bottom: 1px solid white;
+}
+.content__description{
+  margin-top: 15px;
+}
+.content__description p{
+  color: rgb(216, 216, 216);
+}
+
+.content__btn-voltar{
+  margin: 20px;
+  border: none;
+}
+.content__btn-voltar a{
+  border: 1px solid gray;
+  padding: 5px 10px;
+  color: rgb(134, 134, 134);
+}
+.content__btn-voltar a:hover{
+  color: rgb(255, 255, 255);
+}
