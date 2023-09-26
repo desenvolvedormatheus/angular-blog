@@ -1,0 +1,20 @@
+@media screen and (max-width: 1200px){
+  .container__big-card{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .container__big-card{
+    width: 500px;
+  }
+  .big-card__description p{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .container__big-card{
+    width: 300px;
+  }
+}
