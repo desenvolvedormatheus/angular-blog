@@ -3,10 +3,11 @@
     <img src="{{ photoCover }}" alt="imagem do homen de ferro">
   </div>
   <div class="content__title">
-    <h1>{{ contentTitle }}</h1>
+    <h1>{{ cardTitle }}.</h1>
+    <p>By: {{ author }}</p>
   </div>
   <div class="content__description">
-    <p>{{ contentDescription }}</p>
+    <p>{{ cardDescription }}.. <a href="{{ linkNoticia }}" class="noticiaCompleta" target="_blank">leia a noticia completa neste link.</a></p>
   </div>
   <button class="content__btn-voltar">
     <a [routerLink]="['']">Voltar</a>

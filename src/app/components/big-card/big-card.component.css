@@ -16,6 +16,9 @@
   padding-top: 10px;
   text-align: justify;
 }
-.big-card__description p a{
-  color: gray;
+.big-card__description p a, .big-card_date{
+  color: rgb(78, 78, 78);
+}
+.big-card_date{
+  text-align: end;
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NoticeService } from 'src/app/notice.service'
 
 @Component({
   selector: 'app-big-card',
@@ -8,17 +9,25 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BigCardComponent implements OnInit {
 
   @Input()
-  photoCover:string = ''
-  @Input()
-  cardTitle:string = ''
-  @Input()
+  id:string = ''
+  qtdCaracters = ''
+  cardTitle:string =''
   cardDescription:string = ''
-  @Input()
-  id:string = '0'
+  photoCover:string = ''
+  pubDate:string = ''
 
-  constructor() { }
+  constructor(private NoticeService: NoticeService) {
+
+  }
 
   ngOnInit(): void {
+    this.NoticeService.getNotices()
+    .subscribe((data) => {
+      this.cardTitle = data.items[this.id].titulo,
+      this.cardDescription = data.items[this.id].introducao.substring(0, 300) + '..',
+      this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id].imagens).image_intro,
+      this.pubDate = data.items[this.id].data_publicacao
+    })
   }
 
 }

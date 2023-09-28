@@ -1,5 +1,5 @@
 .container__small-card{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(29, 29, 29);
   padding-bottom: 20px;
   margin-bottom: 20px;
   width: 700px;
@@ -11,4 +11,11 @@
 .small-card__photo img{
   width: 200px;
   margin-right: 20px;
+}
+.small-card__title{
+  margin-right: auto;
+}
+.small-card__title p{
+  color: gray;
+  padding: 8px 0;
 }

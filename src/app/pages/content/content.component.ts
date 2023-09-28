@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticeService } from 'src/app/notice.service'
 import { ActivatedRoute } from '@angular/router';
-import { dataFake } from "../../data/dataFake";
 
 @Component({
   selector: 'app-content',
@@ -9,27 +9,31 @@ import { dataFake } from "../../data/dataFake";
 })
 export class ContentComponent implements OnInit {
 
-  photoCover:string = "https://i.ytimg.com/vi/L4kS_3kIuGw/maxresdefault.jpg"
-  contentTitle:string = ""
-  contentDescription:string = ""
-  private id:string | null = "0"
+  id:string | null = '0'
+  cardTitle:string =''
+  cardDescription:string = ''
+  photoCover:string = ''
+  pubDate:string = ''
+  author:string = ''
+  linkNoticia:string = ''
 
-  constructor(private route:ActivatedRoute) {}
+  constructor(private NoticeService: NoticeService, private route:ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe( value =>
       this.id = value.get("id")
     )
 
-    this.setValuesToComponent(this.id)
-  }
-
-  setValuesToComponent(id:string | null){
-    const result = dataFake.filter((article) => article.id == id)[0]
-
-    this.contentTitle = result.title
-    this.contentDescription = result.description
-    this.photoCover = result.photoCover
-
+    this.NoticeService.getNotices()
+    .subscribe((data) => {
+      this.cardTitle = data.items[this.id || 0].titulo,
+      this.cardDescription = data.items[this.id || 0].introducao,
+      this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id || 0].imagens).image_intro,
+      this.pubDate = data.items[this.id || 0].data_publicacao,
+      this.author = data.items[this.id || 0].editorias
+      this.linkNoticia = data.items[this.id || 0].link
+    })
   }
 }

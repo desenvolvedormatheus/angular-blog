@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NoticeService } from 'src/app/notice.service'
 
 @Component({
   selector: 'app-small-card',
@@ -8,15 +9,24 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SmallCardComponent implements OnInit {
 
   @Input()
+  id:string = '0'
+  cardTitle:string =''
+  cardDescription:string = ''
   photoCover:string = ''
-  @Input()
-  cardTtitule:string = ''
-  @Input()
-  id:string = ''
+  pubDate:string = ''
 
-  constructor() { }
+  constructor(private NoticeService: NoticeService) {
+
+  }
 
   ngOnInit(): void {
+    this.NoticeService.getNotices()
+    .subscribe((data) => {
+      this.cardTitle = data.items[this.id].titulo,
+      this.cardDescription = data.items[this.id].introducao,
+      this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id].imagens).image_intro,
+      this.pubDate = data.items[this.id].data_publicacao
+    })
   }
 
 }

@@ -1,11 +1,10 @@
 .container__menu-title{
-  color: white;
   text-align: center;
 }
 .container__menu-title h1{
   margin-bottom: 20px;
   font-size: 135px;
   font-family: 'Segoe UI', sans-serif;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(29, 29, 29);
 }
