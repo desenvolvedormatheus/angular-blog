@@ -9,9 +9,8 @@
 
 .container__menu-bar ul li a{
   padding: 8px;
-  color: rgb(88, 88, 88);
 }
 
 .container__menu-bar ul li a:hover{
-  color: rgb(0, 0, 0);
+  color: rgb(110, 106, 21);
 }

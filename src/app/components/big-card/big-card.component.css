@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   margin: 0 20px;
+  background: rgb(247, 245, 234);
+  padding: 4px;
 }
 .big-card__photo img{
   width: 100%;
@@ -14,7 +16,6 @@
 .big-card__description p{
   width: 100%;
   padding-top: 10px;
-  text-align: justify;
 }
 .big-card__description p a, .big-card_date{
   color: rgb(78, 78, 78);

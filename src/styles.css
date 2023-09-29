@@ -3,9 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #ffffff;
-  color: rgb(24, 24, 24);
+  color: rgb(43, 41, 6);
   font-family: 'Segoe UI', sans-serif;
+  text-align: justify;
+}
+body{
+  background-color: rgb(241, 241, 241);
 }
 a{
   text-decoration: none;

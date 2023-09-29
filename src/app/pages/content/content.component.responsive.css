@@ -1,20 +1,18 @@
-.container__content{
-  border-top: 1px solid gray;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgb(247, 245, 234);
-}
-.content__cover img{
-  margin-top: 20px;
-  width: 500px;
+@media screen and (max-width: 550px){
+  .content__cover img{
+    margin-top: 20px;
+    width: 300px;
+  }
+  .content__title{
+    font-size: 12px;
+  }
 }
 
-.content__title{
-  border-bottom: 1px solid white;
-  padding: 0 40px;
-}
+
+/*
+
+
+
 .content__title p{
   text-align: center;
   border-bottom: 1px solid white;
@@ -25,6 +23,7 @@
 .content__description p{
   color: rgb(29, 29, 29);
   padding: 20px;
+  text-align: justify;
 }
 .noticiaCompleta{
   color: rgb(0, 4, 255);
@@ -42,4 +41,4 @@
 .content__btn-voltar a:hover{
   color: white;
   background-color: black;
-}
+} */

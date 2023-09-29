@@ -22,10 +22,14 @@ export class SmallCardComponent implements OnInit {
   ngOnInit(): void {
     this.NoticeService.getNotices()
     .subscribe((data) => {
-      this.cardTitle = data.items[this.id].titulo,
-      this.cardDescription = data.items[this.id].introducao,
-      this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id].imagens).image_intro,
-      this.pubDate = data.items[this.id].data_publicacao
+      if(Number(this.id) > 9){
+        console.log("Um valor maior que 8 de id no component small-Card foi passado")
+      }else{
+        this.cardTitle = data.items[this.id].titulo,
+        this.cardDescription = data.items[this.id].introducao,
+        this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id].imagens).image_intro,
+        this.pubDate = data.items[this.id].data_publicacao
+      }
     })
   }
 

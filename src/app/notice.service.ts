@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'
 })
 
 export class NoticeService {
-  private apiUrl = `https://servicodados.ibge.gov.br/api/v3/noticias?qtd=8&introsize=2000`
+  private apiUrl = `https://servicodados.ibge.gov.br/api/v3/noticias?qtd=9&introsize=2000`
 
   constructor(private http: HttpClient) { }
 
