@@ -29,7 +29,7 @@ export class ContentComponent implements OnInit {
     this.NoticeService.getNotices()
     .subscribe((data) => {
       this.cardTitle = data.items[this.id || 0].titulo,
-      this.cardDescription = (data.items[this.id || 0].introducao).replaceAll(".", ". \n"),
+      this.cardDescription = (data.items[this.id || 0].introducao).split("."),
       this.photoCover = 'https://agenciadenoticias.ibge.gov.br/' + JSON.parse(data.items[this.id || 0].imagens).image_intro,
       this.pubDate = data.items[this.id || 0].data_publicacao,
       this.author = data.items[this.id || 0].editorias
