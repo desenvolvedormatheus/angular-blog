@@ -7,7 +7,7 @@
     <p>By: {{ author }}</p>
   </div>
   <div class="content__description">
-    <p>{{ cardDescription }}.. <a href="{{ linkNoticia }}" class="noticiaCompleta" target="_blank">leia a noticia completa neste link.</a></p>
+    <p>{{ cardDescription[0] }}.. <a href="{{ linkNoticia }}" class="noticiaCompleta" target="_blank">leia a noticia completa neste link.</a></p>
   </div>
   <button class="content__btn-voltar">
     <a [routerLink]="['']">Voltar</a>
