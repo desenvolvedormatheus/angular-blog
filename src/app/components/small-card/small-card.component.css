@@ -1,12 +1,13 @@
 .container__small-card{
   background: rgb(247, 245, 234);
-  padding: 4px;
   margin-bottom: 20px;
   width: 700px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  box-shadow: 7px 6px 20px 0px #d4d4d48a;
 }
 .small-card__photo img{
   width: 200px;
